@@ -76,7 +76,7 @@ function loginUser() {
 }
 
 function subscribeToChannel() {
-	Cloud.PushNotifications.subscribe({
+	Cloud.PushNotifications.subscribeToken({
         channel: channel,
         device_token: deviceToken,
         type: platform
@@ -92,7 +92,7 @@ function subscribeToChannel() {
 }
 
 function unsubscribeToChannel() {
-	Cloud.PushNotifications.unsubscribe({
+	Cloud.PushNotifications.unsubscribeToken({
         channel: channel,
         device_token: deviceToken
     }, function (e) {
